@@ -162,6 +162,7 @@ public class widget extends JFrame implements ActionListener
 		play_announcement("snd/online.wav");
 		System.out.println("Battle Control Online");
 		System.out.println("We are now at DEFCON " + defcon_level);
+		setIconImage(levels_act[defcon_level-1].getImage());
 		setVisible(true);
 	}
 	
@@ -256,5 +257,6 @@ public class widget extends JFrame implements ActionListener
 		else switch_right.setEnabled(true);
 		if(defcon_level==1) switch_left.setEnabled(false);
 		else switch_left.setEnabled(true);
+		setIconImage(levels_act[defcon_level-1].getImage());
 	}
 }
